@@ -111,8 +111,6 @@ $ curl -s -H "Host: www.example.com" http://localhost:30100 | grep title
 <title>Welcome to nginx!</title>
 ```
 
-### Local Registry
-```
 ### Advanced Features
 ```yaml
 kind: Cluster
