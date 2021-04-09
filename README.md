@@ -53,15 +53,15 @@ apiVersion: kind.x-k8s.io/v1alpha4
  ```
 ### Ingress Support
 ```bash
-```
 $ kubectl apply -f https://raw.githubusercontent.com/containous/traefik/v1.7/examples/k8s/traefik-rbac.yaml
+
 $ kubectl apply -f https://raw.githubusercontent.com/containous/traefik/v1.7/examples/k8s/traefik-ds.yaml
+
 $ kubectl edit service/traefik-ingress-service -n kube-system
 ```
-
 Make sure we update `traefik`'s service, like this:
 
-```sh
+```bash
 $ kubectl apply -n kube-system -f - <<EOF
 kind: Service
 apiVersion: v1
@@ -86,7 +86,7 @@ EOF
 
 Test it out:
 
-```sh
+```bash
 $ kubectl create deployment web --image=nginx
 $ kubectl expose deployment web --port=80
 $ kubectl apply -f - <<EOF
